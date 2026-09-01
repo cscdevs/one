@@ -1,0 +1,100 @@
+{
+  "slug": "",
+  "nome": "",
+  "tipo": "Sistema",
+  "resumo": "",
+  "apiUrl": "https://csc.pportz.com.br",
+  "docs": [],
+  "etapas": [
+    {
+      "titulo": "Descoberta e Requisitos",
+      "descricao": "Entendimento do problema, escopo e criterios de aceite.",
+      "tarefas": [
+        {
+          "titulo": "Levantamento de requisitos",
+          "tempo": "8h",
+          "prioridade": "Alta"
+        },
+        {
+          "titulo": "Definicao de escopo e criterios de aceite",
+          "tempo": "4h",
+          "prioridade": "Alta"
+        }
+      ]
+    },
+    {
+      "titulo": "Arquitetura e Design",
+      "descricao": "Decisoes tecnicas, modelo de dados e desenho das interfaces.",
+      "tarefas": [
+        {
+          "titulo": "Definicao da arquitetura",
+          "tempo": "8h",
+          "prioridade": "Alta"
+        },
+        {
+          "titulo": "Modelagem de dados",
+          "tempo": "6h",
+          "prioridade": "Media"
+        },
+        {
+          "titulo": "Design das telas",
+          "tempo": "8h",
+          "prioridade": "Media"
+        }
+      ]
+    },
+    {
+      "titulo": "Implementacao",
+      "descricao": "Construcao do sistema.",
+      "tarefas": [
+        {
+          "titulo": "Backend / API",
+          "tempo": "24h",
+          "prioridade": "Alta"
+        },
+        {
+          "titulo": "Frontend / Interface",
+          "tempo": "24h",
+          "prioridade": "Alta"
+        },
+        {
+          "titulo": "Integracoes",
+          "tempo": "12h",
+          "prioridade": "Media"
+        }
+      ]
+    },
+    {
+      "titulo": "Testes e Qualidade",
+      "descricao": "Validacao funcional, revisao e ajustes.",
+      "tarefas": [
+        {
+          "titulo": "Testes funcionais",
+          "tempo": "12h",
+          "prioridade": "Alta"
+        },
+        {
+          "titulo": "Revisao de codigo e correcoes",
+          "tempo": "8h",
+          "prioridade": "Media"
+        }
+      ]
+    },
+    {
+      "titulo": "Deploy e Entrega",
+      "descricao": "Publicacao, documentacao final e repasse.",
+      "tarefas": [
+        {
+          "titulo": "Deploy em producao",
+          "tempo": "6h",
+          "prioridade": "Alta"
+        },
+        {
+          "titulo": "Documentacao e treinamento",
+          "tempo": "6h",
+          "prioridade": "Media"
+        }
+      ]
+    }
+  ]
+}

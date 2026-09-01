@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "csc": {
+      "command": "node",
+      "args": [
+        ".csc/server.js"
+      ],
+      "env": {
+        "CSC_API_KEY": "${CSC_API_KEY}",
+        "CSC_API_URL": "${CSC_API_URL:-https://csc.pportz.com.br}"
+      }
+    }
+  }
+}

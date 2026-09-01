@@ -1,0 +1,27 @@
+# Dependencias
+node_modules/
+vendor/
+.venv/
+__pycache__/
+
+# Segredos — a chave de ingestao vive em variavel de ambiente, nunca aqui
+.env
+.env.*
+!.env.example
+
+# Build
+dist/
+build/
+.next/
+coverage/
+
+# Grafo do /graphify: gerado, e republicado a cada sync
+graphify-out/
+
+# Sistema
+.DS_Store
+Thumbs.db
+
+# ATENCAO: .csc/ NAO entra aqui. O runtime do MCP precisa viajar
+# junto com o repositorio, senao um clone nasce sem conexao com a
+# plataforma.

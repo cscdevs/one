@@ -1,0 +1,7 @@
+{
+  "name": "csc-runtime",
+  "private": true,
+  "//": "Gerado por scripts/gerar-template.js. O type commonjs e obrigatorio.",
+  "type": "commonjs",
+  "version": "1.0.0"
+}
