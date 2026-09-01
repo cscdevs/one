@@ -75,7 +75,7 @@ function readmeDoProjeto(nome, slug, resumo) {
     '',
     '## Acompanhamento',
     '',
-    'Este projeto é acompanhado na [Plataforma de Projetos CSC](https://csc.pportz.com.br)',
+    'Este projeto é acompanhado na [Plataforma de Projetos CSC](https://spark.csc.dev.br)',
     'sob o slug `' + slug + '`. As etapas ficam em [`csc.project.json`](csc.project.json) e a',
     'documentação de [`docs/`](docs/) sobe sozinha a cada sessão do Claude Code.',
     '',

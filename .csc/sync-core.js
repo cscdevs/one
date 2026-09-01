@@ -24,7 +24,7 @@ const { execFileSync } = require('child_process');
 const os = require('os');
 const crypto = require('crypto');
 
-const API_URL_PADRAO = 'https://csc.pportz.com.br';
+const API_URL_PADRAO = 'https://spark.csc.dev.br';
 const MANIFESTO = 'csc.project.json';
 
 // Pastas que nunca entram na coleta de documentacao.

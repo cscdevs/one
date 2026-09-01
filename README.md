@@ -1,7 +1,7 @@
 # one — modelo de projeto CSC
 
 Este é o repositório que a gente **clona a cada projeto novo**. Ele não traz código de
-aplicação: traz o arnês que liga um projeto à [Plataforma de Projetos CSC](https://csc.pportz.com.br)
+aplicação: traz o arnês que liga um projeto à [Plataforma de Projetos CSC](https://spark.csc.dev.br)
 e ao ecossistema dos outros sistemas da casa. Serve para qualquer stack — Node, Python,
 PHP, o que for.
 

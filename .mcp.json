@@ -7,7 +7,7 @@
       ],
       "env": {
         "CSC_API_KEY": "${CSC_API_KEY}",
-        "CSC_API_URL": "${CSC_API_URL:-https://csc.pportz.com.br}"
+        "CSC_API_URL": "${CSC_API_URL:-https://spark.csc.dev.br}"
       }
     }
   }
