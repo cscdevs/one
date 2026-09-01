@@ -149,7 +149,15 @@ function principal() {
   const origem = git(['config', '--get', 'remote.origin.url']);
   if (REPO_MODELO.test(origem)) {
     git(['remote', 'rename', 'origin', 'modelo']);
-    feito.push('git remote  (origin do modelo renomeado para "modelo")');
+    // Renomear nao basta: o branch continua rastreando modelo/main, e um
+    // "git push" pelado ainda acertaria o cscdevs/one. Tira o upstream,
+    // para o push reclamar que nao sabe para onde ir.
+    git(['branch', '--unset-upstream']);
+    // E fecha o caminho explicito tambem: "git push modelo" passa a
+    // falhar. O fetch continua, entao "git pull modelo main" segue
+    // trazendo melhorias do modelo.
+    git(['remote', 'set-url', '--push', 'modelo', 'sem-push://o-modelo-nao-recebe-push']);
+    feito.push('git remote  ("modelo" so para receber melhorias; push bloqueado)');
   }
   if (flags.repo) {
     git(['remote', 'remove', 'origin']);
