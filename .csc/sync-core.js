@@ -362,7 +362,7 @@ function slugDoProjeto(config, slugInformado) {
   const slug = slugInformado || config.manifesto.slug;
   if (!slug) {
     throw new Error('Projeto sem slug em ' + MANIFESTO + '.'
-      + ' Se este repositorio veio do modelo, rode:  node bootstrap.js "Nome do Projeto"'
+      + ' Se este repositorio veio do modelo, rode:  node bootstrap.cjs "Nome do Projeto"'
       + ' Se e um repositorio antigo, rode o init do mcp-csc.');
   }
   return slug;
