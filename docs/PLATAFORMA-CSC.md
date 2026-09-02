@@ -20,6 +20,12 @@ A publicação usa uma **chave de serviço** no header `X-CSC-Key`, não o login
 publica é a máquina. A chave vive na variável de ambiente `CSC_API_KEY` e nunca entra no
 repositório.
 
+Quem emite é o admin, em **Admin → Chaves MCP** na plataforma. O backend guarda apenas o
+`sha256` da chave, então o valor em claro só existe na tela onde foi gerada e na variável de
+ambiente da máquina. Revogar é imediato: a chave revogada volta a dar 401 no sync seguinte.
+A `CSC_INGEST_KEY` compartilhada continua aceita como fallback, para os projetos anteriores
+às chaves individuais.
+
 ## Quando o sync dispara
 
 São dois hooks, com papéis diferentes:
@@ -125,8 +131,8 @@ Rode `node .csc/cli.js status` — ou a ferramenta `csc_status` dentro do Claude
 
 | Sintoma | Causa provável |
 | --- | --- |
-| `Ingestao desabilitada` (503) | `CSC_INGEST_KEY` não está no `.env` do backend |
-| `Chave de ingestao invalida` (401) | `CSC_API_KEY` diferente da chave do servidor |
+| `Ingestao desabilitada` (503) | Nenhuma chave emitida em Admin → Chaves MCP e nenhum `CSC_INGEST_KEY` no `.env` do backend |
+| `Chave de ingestao invalida` (401) | `CSC_API_KEY` errada, ou a chave foi revogada no painel |
 | `Projeto sem slug` | O `bootstrap.cjs` não rodou neste clone |
 | `Projeto "x" nao encontrado` | Rode o sync completo antes de atualizar etapas |
 | `Etapa "x" nao encontrada` | O erro lista as etapas válidas — use o título exato |

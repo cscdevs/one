@@ -173,7 +173,8 @@ function principal() {
   let passo = 1;
   if (!process.env.CSC_API_KEY) {
     console.log('  ' + (passo++) + '. Definir a chave de ingestao (uma vez por maquina):');
-    console.log('       setx CSC_API_KEY "<a chave do backend>"');
+    console.log('       setx CSC_API_KEY "csc_..."');
+    console.log('     Peca a chave a um admin: na plataforma, Admin > Chaves MCP.');
     console.log('     Depois abra um terminal novo — setx so vale em processos novos.');
   }
   if (!flags.repo && REPO_MODELO.test(origem)) {

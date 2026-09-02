@@ -38,14 +38,23 @@ Opções úteis: `--slug=`, `--repo=<url>` (já configura o origin), `--resumo="
 ## Uma vez por máquina
 
 A publicação usa uma **chave de serviço**, não o seu login — quem publica é a máquina.
-Ela nunca entra no repositório:
+Ela nunca entra no repositório.
+
+Peça a chave a um administrador da plataforma. Ele gera em
+**[spark.csc.dev.br](https://spark.csc.dev.br) → Admin → Chaves MCP**: dá um nome à chave
+(normalmente o do projeto) e entrega o valor. A chave aparece **uma única vez** — a
+plataforma guarda só o hash dela. Se você perder, peça outra; a antiga é revogada.
 
 ```powershell
-setx CSC_API_KEY "<a chave de ingestao do backend>"
+setx CSC_API_KEY "csc_..."
 ```
 
 `setx` só vale em processos novos: abra um terminal novo depois. Para apontar para um
 backend local em vez de produção, `setx CSC_API_URL "http://localhost:3002"`.
+
+Uma chave por projeto é o padrão: assim dá para revogar a de um repositório sem derrubar
+a publicação dos outros. E o log de auditoria da plataforma passa a mostrar qual chave
+publicou o quê.
 
 ## Depois disso
 
